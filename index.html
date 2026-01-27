@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function l(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}function r(a){var c=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(c)return c.call(a);if(typeof a.length=="number")return{next:l(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var t=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,g){if(a==Array.prototype||a==Object.prototype)return a;a[c]=g.value;return a};
+function u(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var g=a[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var v=u(this);function x(a,c){if(c)a:{var g=v;a=a.split(".");for(var h=0;h<a.length-1;h++){var m=a[h];if(!(m in g))break a;g=g[m]}a=a[a.length-1];h=g[a];c=c(h);c!=h&&c!=null&&t(g,a,{configurable:!0,writable:!0,value:c})}}
+function y(a){if(!(a instanceof Object))throw new TypeError("Iterator result "+a+" is not an object");}function z(){this.o=!1;this.j=null;this.u=void 0;this.g=1;this.i=this.l=0;this.C=this.h=null}function A(a){if(a.o)throw new TypeError("Generator is already running");a.o=!0}z.prototype.v=function(a){this.u=a};function B(a,c){a.h={K:c,L:!0};a.g=a.l||a.i}z.prototype.N=function(){return this.g};z.prototype.getNextAddress=z.prototype.N;z.prototype.O=function(){return this.u};
+z.prototype.getYieldResult=z.prototype.O;z.prototype.return=function(a){this.h={return:a};this.g=this.i};z.prototype["return"]=z.prototype.return;z.prototype.P=function(a){this.h={B:a};this.g=this.i};z.prototype.jumpThroughFinallyBlocks=z.prototype.P;z.prototype.A=function(a,c){this.g=c;return{value:a}};z.prototype.yield=z.prototype.A;z.prototype.T=function(a,c){a=r(a);var g=a.next();y(g);if(g.done)this.u=g.value,this.g=c;else return this.j=a,this.A(g.value,c)};z.prototype.yieldAll=z.prototype.T;
+z.prototype.B=function(a){this.g=a};z.prototype.jumpTo=z.prototype.B;z.prototype.F=function(){this.g=0};z.prototype.jumpToEnd=z.prototype.F;z.prototype.H=function(a,c){this.l=a;c!=void 0&&(this.i=c)};z.prototype.setCatchFinallyBlocks=z.prototype.H;z.prototype.S=function(a){this.l=0;this.i=a||0};z.prototype.setFinallyBlock=z.prototype.S;z.prototype.G=function(a,c){this.g=a;this.l=c||0};z.prototype.leaveTryBlock=z.prototype.G;z.prototype.D=function(a){this.l=a||0;a=this.h.K;this.h=null;return a};
+z.prototype.enterCatchBlock=z.prototype.D;z.prototype.J=function(a,c,g){g?this.C[g]=this.h:this.C=[this.h];this.l=a||0;this.i=c||0};z.prototype.enterFinallyBlock=z.prototype.J;z.prototype.R=function(a,c){c=this.C.splice(c||0)[0];(c=this.h=this.h||c)?c.L?this.g=this.l||this.i:c.B!=void 0&&this.i<c.B?(this.g=c.B,this.h=null):this.g=this.i:this.g=a};z.prototype.leaveFinallyBlock=z.prototype.R;z.prototype.M=function(a){return new C(a)};z.prototype.forIn=z.prototype.M;
+function C(a){this.i=a;this.g=[];for(var c in a)this.g.push(c);this.g.reverse()}C.prototype.h=function(){for(;this.g.length>0;){var a=this.g.pop();if(a in this.i)return a}return null};C.prototype.getNext=C.prototype.h;function F(a){this.g=new z;this.h=a}function G(a,c){A(a.g);var g=a.g.j;if(g)return H(a,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return I(a)}
+function H(a,c,g,h){try{var m=c.call(a.g.j,g);y(m);if(!m.done)return a.g.o=!1,m;var n=m.value}catch(f){return a.g.j=null,B(a.g,f),I(a)}a.g.j=null;h.call(a.g,n);return I(a)}function I(a){for(;a.g.g;)try{var c=a.h(a.g);if(c)return a.g.o=!1,{value:c.value,done:!1}}catch(g){a.g.u=void 0,B(a.g,g)}a.g.o=!1;if(a.g.h){c=a.g.h;a.g.h=null;if(c.L)throw c.K;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){A(a.g);a.g.j?c=H(a,a.g.j.next,c,a.g.v):(a.g.v(c),c=I(a));return c};this.throw=function(c){A(a.g);a.g.j?c=H(a,a.g.j["throw"],c,a.g.v):(B(a.g,c),c=I(a));return c};this.return=function(c){return G(a,c)};this[Symbol.iterator]=function(){return this}}function K(a){function c(h){return a.next(h)}function g(h){return a.throw(h)}return new Promise(function(h,m){function n(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(n,m)}n(a.next())})}
+x("Symbol",function(a){function c(n){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(n||"")+"_"+m++,n)}function g(n,f){this.g=n;t(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",m=0;return c});
+x("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");t(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return L(l(this))}});return a});function L(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+x("Promise",function(a){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var b=this.j();try{f(b.resolve,b.reject)}catch(d){b.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(b){b(f)})}if(a)return a;g.prototype.h=function(f){if(this.g==null){this.g=[];var b=this;this.i(function(){b.l()})}this.g.push(f)};var m=v.setTimeout;g.prototype.i=function(f){m(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var b=0;b<f.length;++b){var d=
+f[b];f[b]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(b,k))}}var b=this,d=!1;return{resolve:f(this.F),reject:f(this.l)}};c.prototype.F=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.H(f);else{a:switch(typeof f){case "object":var b=f!=null;break a;case "function":b=!0;break a;default:b=!1}b?this.D(f):this.o(f)}};
+c.prototype.D=function(f){var b=void 0;try{b=f.then}catch(d){this.l(d);return}typeof b=="function"?this.J(b,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,b){if(this.h!=0)throw Error("Cannot settle("+f+", "+b+"): Promise already settled in state"+this.h);this.h=f;this.i=b;this.h===2&&this.G();this.C()};c.prototype.G=function(){var f=this;m(function(){if(f.A()){var b=v.console;typeof b!=="undefined"&&b.error(f.i)}},1)};c.prototype.A=
+function(){if(this.u)return!1;var f=v.CustomEvent,b=v.Event,d=v.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof b==="function"?f=new b("unhandledrejection",{cancelable:!0}):(f=v.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.C=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)n.h(this.g[f]);this.g=null}};var n=new g;c.prototype.H=
+function(f){var b=this.j();f.I(b.resolve,b.reject)};c.prototype.J=function(f,b){var d=this.j();try{f.call(b,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,b){function d(p,w){return typeof p=="function"?function(D){try{e(p(D))}catch(E){k(E)}}:w}var e,k,q=new c(function(p,w){e=p;k=w});this.I(d(f,e),d(b,k));return q};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.I=function(f,b){function d(){switch(e.h){case 1:f(e.i);break;case 2:b(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?n.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(b,d){d(f)})};c.race=function(f){return new c(function(b,d){for(var e=r(f),k=e.next();!k.done;k=e.next())h(k.value).I(b,d)})};c.all=function(f){var b=r(f),d=b.next();return d.done?h([]):new c(function(e,k){function q(D){return function(E){p[D]=E;w--;w==0&&e(p)}}var p=[],w=0;do p.push(void 0),w++,h(d.value).I(q(p.length-1),k),d=b.next();while(!d.done)})};return c});
+function M(a,c){return Object.prototype.hasOwnProperty.call(a,c)}x("Object.is",function(a){return a?a:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(a){return a?a:function(c,g){var h=this;h instanceof String&&(h=String(h));var m=h.length;g=g||0;for(g<0&&(g=Math.max(g+m,0));g<m;g++){var n=h[g];if(n===c||Object.is(n,c))return!0}return!1}});
+x("String.prototype.includes",function(a){return a?a:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(a){function c(d){this.g=(b+=Math.random()+1).toString();if(d){d=r(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function m(d){if(!M(d,f)){var e=new g;t(d,f,{value:e})}}function n(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&m(k);return e(k)})}if(function(){if(!a||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new a([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(q){return!1}}())return a;var f="$jscomp_hidden_"+Math.random();n("freeze");n("preventExtensions");n("seal");var b=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");m(d);if(!M(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&M(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&M(d,
+f)&&M(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&M(d,f)&&M(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(a){function c(){var b={};return b.m=b.next=b.head=b}function g(b,d){var e=b[1];return L(function(){if(e){for(;e.head!=b[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(b,d){var e=d&&typeof d;e=="object"||e=="function"?n.has(d)?e=n.get(d):(e=""+ ++f,n.set(d,e)):e="p_"+d;var k=b[0][e];if(k&&M(b[0],e))for(b=0;b<k.length;b++){var q=k[b];if(d!==d&&q.key!==q.key||d===q.key)return{id:e,list:k,index:b,entry:q}}return{id:e,
+list:k,index:-1,entry:void 0}}function m(b){this[0]={};this[1]=c();this.size=0;if(b){b=r(b);for(var d;!(d=b.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var b=Object.seal({x:4}),d=new a(r([[b,"s"]]));if(d.get(b)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=b||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(q){return!1}}())return a;var n=new WeakMap;m.prototype.set=function(b,d){b=b===0?0:b;var e=h(this,b);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:b,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};m.prototype.delete=function(b){b=h(this,b);return b.entry&&b.list?(b.list.splice(b.index,1),b.list.length||delete this[0][b.id],b.entry.m.next=b.entry.next,
+b.entry.next.m=b.entry.m,b.entry.head=null,this.size--,!0):!1};m.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};m.prototype.has=function(b){return!!h(this,b).entry};m.prototype.get=function(b){return(b=h(this,b).entry)&&b.value};m.prototype.entries=function(){return g(this,function(b){return[b.key,b.value]})};m.prototype.keys=function(){return g(this,function(b){return b.key})};m.prototype.values=function(){return g(this,function(b){return b.value})};m.prototype.forEach=
+function(b,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,b.call(d,k[1],k[0],this)};m.prototype[Symbol.iterator]=m.prototype.entries;var f=0;return m});
+x("Set",function(a){function c(g){this.g=new Map;if(g){g=r(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new a(r([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var m=h.entries(),n=m.next();if(n.done||n.value[0]!=g||n.value[1]!=g)return!1;n=m.next();return n.done||n.value[0]==g||n.value[0].x!=4||
+n.value[1]!=n.value[0]?!1:m.next().done}catch(f){return!1}}())return a;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var m=this;this.g.forEach(function(n){return g.call(h,n,n,m)})};return c});(function(){function a(){return n?Promise.resolve(n):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(b){if(!b.ok)throw Error("HTTP error! status: "+b.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return b.json()}).then(function(b){if(!Array.isArray(b))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return n=b}).catch(function(b){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",b);f=null;throw b;})}function c(b){var d,e,k,q;return K(new J(new F(function(p){switch(p.g){case 1:d=(b.textContent||"").trim();if(!d||b.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return p.return();e=window.getComputedStyle(b);if(e.display==="none"||e.visibility==="hidden")return p.return();
+p.H(2);return p.A(a(),4);case 4:k=p.u;p.G(3);break;case 2:return p.D(),console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),p.return();case 3:(q=k.includes(d))?b.classList.contains("js-replaced-missing-icon")&&b.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&b.classList.contains("js-replaced-missing-icon")||(b.textContent="radio_button_unchecked",b.classList.add("js-replaced-missing-icon")),p.F()}})))}function g(b){b=b===void 0?
+document.body:b;b.querySelectorAll(m).forEach(function(d){c(d)})}function h(){a().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(b){var d=new Set;b=r(b);for(var e=b.next();!e.done;e=b.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(q){q.nodeType===Node.ELEMENT_NODE&&(q.matches(m)&&d.add(q),q.querySelectorAll(m).forEach(function(p){d.add(p)}))});else if(e.type==="attributes"&&e.attributeName===
+"class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(m)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(m)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(q){c(q)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(b){console.error("IconChecker: Font loading error. Scanning icons anyway.",b);requestAnimationFrame(function(){g(document.body)})})}
+var m=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(b){return"."+b}).join(","),n=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Daily Income Calculator</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+<style>
+        :root {
+            /* Color Palette - Light Mode */
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #000000;
+            --box-bg: #000000;
+            --box-text: #ffffff;
+            --border-color: #000000;
+            --input-placeholder: #e5e5e5;
+            --slider-track: #e5e5e5;
+            --slider-thumb: #000000;
+            --hover-bg: #f3f4f6;
+            --detail-bg: #ffffff;
+            --toggle-bg-active: #000000;
+            --toggle-text-active: #ffffff;
+            --toggle-bg-inactive: #f3f4f6;
+            --toggle-text-inactive: #6b7280;
+            --text-subtle: #9ca3af;
+            
+            /* Layout */
+            --max-width: 48rem;
+            
+            /* Icons */
+            --select-arrow: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        }
+
+        body.dark-mode {
+            /* Color Palette - Dark Mode */
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --accent-color: #ffffff;
+            --box-bg: #ffffff;
+            --box-text: #000000;
+            --border-color: #ffffff;
+            --input-placeholder: #333333;
+            --slider-track: #333333;
+            --slider-thumb: #ffffff;
+            --hover-bg: #1f2937;
+            --detail-bg: #000000;
+            --toggle-bg-active: #ffffff;
+            --toggle-text-active: #000000;
+            --toggle-bg-inactive: #333333;
+            --toggle-text-inactive: #9ca3af;
+            --text-subtle: #9ca3af;
+            --select-arrow: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        }
+
+        /* Reset & Base Styles */
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Barlow Condensed', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            padding-top: 5rem;
+        }
+
+        /* Helper Classes */
+        .text-center { text-align: center; }
+        .uppercase { text-transform: uppercase; }
+        .font-bold { font-weight: 700; }
+        .font-medium { font-weight: 500; }
+        .w-full { width: 100%; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .justify-between { justify-content: space-between; }
+        .items-center { align-items: center; }
+        .items-end { align-items: flex-end; }
+        .items-start { align-items: flex-start; }
+        .items-baseline { align-items: baseline; }
+        .select-none { user-select: none; }
+        .cursor-pointer { cursor: pointer; }
+        
+        .text-subtle { color: var(--text-subtle); }
+        .tracking-widest { letter-spacing: 0.1em; }
+        .tracking-wider { letter-spacing: 0.05em; }
+        .tracking-tighter { letter-spacing: -0.05em; }
+        
+        /* Layout Container */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 4px solid var(--border-color);
+            padding-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            header { flex-direction: row; gap: 0; }
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            line-height: 1;
+            margin: 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        @media (min-width: 640px) { header h1 { width: auto; } }
+
+        .header-date-group {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            width: 100%;
+            justify-content: flex-end;
+        }
+        @media (min-width: 640px) { .header-date-group { width: auto; } }
+
+        /* Primary Output (Main Number) */
+        .primary-output {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .label-main {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .main-number-box {
+            background-color: var(--box-bg);
+            color: var(--box-text);
+            padding: 1.5rem 2.5rem;
+            display: inline-flex;
+            align-items: flex-start;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        .dollar-sign {
+            font-size: 2.5rem; 
+            font-weight: 700;
+            margin-right: 0.5rem;
+            line-height: 1;
+            margin-top: 0.25em; /* Precisely aligns top of symbol to top of numbers */
+        }
+
+        .display-daily {
+            font-size: 6rem;
+            line-height: 0.9;
+        }
+
+        @media (min-width: 640px) {
+            .dollar-sign { font-size: 4rem; margin-top: 0.2em; }
+            .display-daily { font-size: 9rem; }
+        }
+
+        .subtext {
+            font-size: 0.875rem;
+            margin-top: 1.5rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: lowercase;
+        }
+
+        /* Secondary Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            border-top: 2px solid var(--border-color);
+            border-left: 2px solid var(--border-color);
+        }
+
+        @media (min-width: 640px) {
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .stat-card {
+            padding: 1.5rem;
+            border-right: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 8rem;
+            transition: background-color 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover { background-color: var(--hover-bg); }
+
+        .stat-label {
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value-container {
+            font-size: 2.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1;
+        }
+
+        .dollar-sup {
+            font-size: 0.5em;
+            line-height: 1;
+            margin-right: 0.25rem;
+            margin-top: 0.18em; /* Aligning top of symbol to top of text */
+        }
+
+        .stat-unit {
+            font-size: 1.125rem;
+            font-weight: 400;
+            align-self: flex-end;
+            margin-bottom: 0.25rem;
+            margin-left: 0.25rem;
+        }
+
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 0.25rem;
+            background-color: var(--accent-color);
+            transition: width 0.5s ease;
+            z-index: 10;
+        }
+
+        .z-10 { position: relative; z-index: 10; }
+
+        /* Inputs Section */
+        .salary-section { margin-top: 2rem; }
+        
+        .salary-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .salary-input-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .salary-dollar {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            line-height: 1;
+        }
+
+        .brutalist-input-large {
+            width: 100%;
+            font-size: 4.5rem;
+            font-weight: 700;
+            background: transparent;
+            color: var(--text-color);
+            border: none;
+            padding: 0;
+            line-height: 1;
+            letter-spacing: -0.05em;
+            font-family: inherit;
+        }
+        .brutalist-input-large:focus { outline: none; }
+        .brutalist-input-large::placeholder { color: #9ca3af; }
+
+        /* Slider Common */
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            color: var(--text-subtle);
+        }
+
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+            display: block;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 12px;
+            background: var(--slider-thumb);
+            cursor: pointer;
+            margin-top: -10px;
+            border: none;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            background: var(--slider-track);
+            border: none;
+        }
+        input[type=range]:focus { outline: none; }
+
+        /* Settings Details */
+        details.settings-group {
+            border: 2px solid var(--border-color);
+            background: var(--detail-bg);
+        }
+
+        summary {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        summary:hover { background-color: var(--hover-bg); }
+
+        .summary-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .chevron { transition: transform 0.2s; }
+        details[open] .chevron { transform: rotate(180deg); }
+
+        .settings-content {
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @media (min-width: 768px) {
+            .settings-content { grid-template-columns: 1fr 1fr; gap: 3rem; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Form Controls */
+        .control-group { display: flex; flex-direction: column; gap: 0.75rem; }
+
+        .control-header { display: flex; justify-content: space-between; align-items: center; }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        input[type=checkbox] {
+            appearance: none;
+            background-color: transparent;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.25em;
+            height: 1.25em;
+            border: 2px solid var(--border-color);
+            display: grid;
+            place-content: center;
+        }
+        input[type=checkbox]::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em var(--accent-color);
+        }
+        input[type=checkbox]:checked::before { transform: scale(1); }
+
+        .value-display { display: flex; align-items: baseline; }
+
+        .input-inline {
+            width: 4rem;
+            text-align: right;
+            font-weight: 700;
+            background: transparent;
+            color: var(--text-color);
+            border: none;
+            border-bottom: 2px solid var(--border-color);
+            font-size: 1.25rem;
+            padding: 0;
+            font-family: inherit;
+        }
+        .input-inline:focus { outline: none; }
+
+        .no-spinner::-webkit-outer-spin-button,
+        .no-spinner::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .toggle-group { display: flex; gap: 0.5rem; width: 100%; font-size: 0.875rem; }
+
+        .toggle-container {
+            display: flex;
+            border: 1px solid var(--border-color);
+            padding: 0.125rem;
+            background-color: var(--toggle-bg-inactive);
+            flex: 1;
+        }
+
+        .btn-toggle {
+            flex: 1;
+            padding: 0.25rem 0.5rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-toggle.active { background-color: var(--toggle-bg-active); color: var(--toggle-text-active); }
+        .btn-toggle.inactive { background-color: var(--toggle-bg-inactive); color: var(--toggle-text-inactive); }
+        .btn-toggle.inactive:hover { background-color: var(--hover-bg); }
+
+        .select-styled {
+            flex: 1;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 0.25rem 0.5rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 0;
+            font-family: inherit;
+            
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: var(--select-arrow);
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            background-size: 1.25em;
+            padding-right: 2.5rem;
+        }
+        .select-styled:focus { outline: none; }
+
+        .info-row {
+            font-size: 0.75rem;
+            color: var(--text-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 0.25rem;
+        }
+        
+        .info-row a {
+            color: var(--text-subtle);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .info-row a:hover { color: var(--text-color); }
+        .icon-sm { font-size: 0.875rem !important; }
+
+        .divider {
+            grid-column: 1 / -1;
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .divider h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 1.125rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.25rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .h-separator {
+            height: 0.25rem;
+            background-color: var(--hover-bg);
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-subtle);
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        footer a, footer button {
+            color: inherit;
+            text-decoration: underline;
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+        }
+        footer a:hover, footer button:hover { color: var(--text-color); }
+
+        /* Floating UI Elements */
+        .floating-btn {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 40;
+            padding: 0.5rem;
+            border-radius: 9999px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: background-color 0.2s;
+        }
+        .floating-btn:hover { background-color: var(--hover-bg); }
+        .floating-btn .material-symbols-outlined { font-size: 1.875rem; }
+
+        #edit-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3rem;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+            z-index: 50;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        body.edit-mode #edit-bar { transform: translateY(0); }
+        body.edit-mode [data-editable] { cursor: text; }
+
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            text-align: center;
+            padding: 16px;
+            position: fixed;
+            z-index: 50;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0;
+            transition: opacity 0.3s, bottom 0.3s;
+        }
+        
+        #toast.show { visibility: visible; opacity: 1; bottom: 50px; }
+
+    </style>
+</head>
+<body class="">
+<!-- Theme Toggle -->
+<button aria-label="Toggle Theme" class="floating-btn" id="theme-toggle">
+<span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+</button>
+<!-- Edit Mode Top Bar -->
+<div id="edit-bar">
+<span style="font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.875rem;">Edit Mode Active</span>
+<button id="close-edit-mode" style="background:none; border:none; color:inherit; cursor:pointer;">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Toast Notification -->
+<div id="toast">Notification</div>
+<!-- Main Container -->
+<div class="container">
+<!-- Header -->
+<header>
+<h1 data-editable="main-title"></h1>
+<div class="header-date-group">
+<span class="text-subtle uppercase" data-editable="subtitle-est" style="font-weight: 500; font-size: 0.875rem;"></span>
+<div id="current-date" style="font-size: 1.125rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Monday, January 26, 2026</div>
+</div>
+</header>
+<!-- Primary Output: Paid Today -->
+<div class="primary-output">
+<div class="label-main text-subtle tracking-widest" data-editable="label-paid-today">TODAY, YOU MADE</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+<div class="main-number-box">
+<span class="dollar-sign select-none">$</span>
+<span class="display-daily font-bold tracking-tighter" id="display-daily">441</span>
+</div>
+</div>
+<div class="subtext text-subtle">
+<span id="tax-status-text">after taxes,</span>
+<span data-editable="text-based-on">BASED ON</span>
+<span id="summary-workdays">228</span>
+<span data-editable="text-workdays">WORKING DAYS/YEAR</span>
+<span id="benefits-status-text"> and health care benefits paid</span>
+</div>
+</div>
+<!-- Secondary Grid -->
+<div class="stats-grid">
+<!-- Hourly -->
+<div class="stat-card">
+<span class="stat-label text-subtle" data-editable="label-hourly">FOR EVERY HOUR,</span>
+<div class="stat-value-container">
+<span class="dollar-sup">$</span>
+<span id="display-hourly">55.15</span>
+<span class="stat-unit text-subtle">/hr</span>
+</div>
+</div>
+<!-- Paid So Far -->
+<div class="stat-card">
+<span class="stat-label text-subtle z-10" data-editable="label-ytd">THIS YEAR, SO FAR</span>
+<div class="stat-value-container z-10">
+<span class="dollar-sup">$</span>
+<span id="display-ytd">7,166</span>
+</div>
+<div class="progress-bar" id="progress-bar-ytd" style="width: 7.12329%;"></div>
+</div>
+<!-- Remaining -->
+<div class="stat-card">
+<span class="stat-label text-subtle" data-editable="label-remaining" style="line-height: 1.2;">IF YOU STICK IT OUT TO EOY, 2026</span>
+<div class="stat-value-container">
+<span class="dollar-sup">$</span>
+<span id="display-remaining">93,434</span>
+</div>
+</div>
+</div>
+<!-- Main Input: Salary -->
+<div class="salary-section">
+<label class="salary-label tracking-wider" data-editable="label-salary-input">BASED ON YOUR AN ANNUAL (PRE-TAX) SALARY</label>
+<div class="salary-input-group">
+<span class="salary-dollar">$</span>
+<input class="brutalist-input-large" id="salary-input" placeholder="0" type="text" value="100,000">
+</div>
+<input id="salary-slider" max="500000" min="0" step="1000" type="range" value="100000">
+<div class="slider-labels">
+<span>$0</span>
+<span>$250k</span>
+<span>$500k+</span>
+</div>
+</div>
+<!-- Collapsible Settings -->
+<details class="settings-group">
+<summary>
+<span class="summary-title" data-editable="section-config-title">SETTINGS</span>
+<span class="material-symbols-outlined chevron">expand_more</span>
+</summary>
+<div class="settings-content">
+<!-- Tax Rate -->
+<div class="control-group">
+<div class="control-header">
+<label class="checkbox-label" data-editable="label-tax" for="check-tax">
+<input checked="" id="check-tax" type="checkbox">
+                            AFTER TAXES
+                        </label>
+<div class="value-display">
+<input class="input-inline no-spinner" id="val-tax" type="number" value="25">
+<span style="font-size: 1.125rem; font-weight: 700;">%</span>
+</div>
+</div>
+<div class="toggle-group">
+<div class="toggle-container">
+<button class="btn-toggle inactive" data-editable="btn-single" id="btn-single">SINGLE</button>
+<button class="btn-toggle active" data-editable="btn-joint" id="btn-joint">MARRIED</button>
+</div>
+<select class="select-styled" id="select-state">
+<option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option>
+<option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option>
+<option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option>
+<option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option>
+<option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option>
+<option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option>
+<option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option>
+<option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option>
+<option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option>
+<option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option>
+<option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option>
+<option value="VT">VT</option><option value="VA">VA</option><option selected="" value="WA">WA</option><option value="WV">WV</option>
+<option value="WI">WI</option><option value="WY">WY</option><option value="DC">DC</option>
+</select>
+</div>
+<div class="info-row">
+<span data-editable="info-tax-breakdown" id="tax-breakdown-label">Defaults to average for income level combining Fed + State + FICA</span>
+</div>
+<input id="slider-tax" max="60" min="0" type="range" value="25">
+</div>
+<!-- Benefits -->
+<div class="control-group">
+<div class="control-header">
+<label class="checkbox-label" data-editable="label-benefits" for="check-benefits">
+<input checked="" id="check-benefits" type="checkbox">
+                            COUNTING BENEFITS
+                        </label>
+<div class="value-display">
+<span style="font-size: 1.125rem; font-weight: 700;">$</span>
+<input class="input-inline" id="val-benefits" style="width: 5rem;" type="text" value="20,100">
+</div>
+</div>
+<div class="info-row">
+<span data-editable="info-benefits" style="width: 80%;">$$ paid by company in healthcare, 401k etc. Default based on average benefits paid by US Employers for salaried employees</span>
+<a href="https://www.webpronews.com/small-firms-insurance-shield-cracks-under-cost-surge/" target="_blank">
+<span class="material-symbols-outlined icon-sm">link</span>
+</a>
+</div>
+<input id="slider-benefits" max="40000" min="0" step="100" type="range" value="20100">
+</div>
+<!-- Divider -->
+<div class="divider">
+<h3 data-editable="label-deductions-header">DON'T COUNT THESE DAYS AS WORKING TIME:</h3>
+</div>
+<!-- Vacation -->
+<div class="control-group">
+<div class="control-header">
+<label class="checkbox-label" data-editable="label-weeks-off" for="check-vacation">
+<input checked="" id="check-vacation" type="checkbox">
+                            VACATION DAYS
+                        </label>
+<input class="input-inline no-spinner" id="val-vacation" type="number" value="15">
+</div>
+<div class="info-row">
+<span data-editable="info-weeks-off" style="width: 80%;">Vacation / unpaid leave that you get with your job. Default is average for salaried employees in 2025.</span>
+<a href="https://www.bls.gov/news.release/pdf/ebs2.pdf" target="_blank">
+<span class="material-symbols-outlined icon-sm">link</span>
+</a>
+</div>
+<input id="slider-vacation" max="30" min="0" type="range" value="15">
+</div>
+<!-- Weekends -->
+<div class="control-group">
+<div class="control-header">
+<label class="checkbox-label" data-editable="label-weekends" for="check-weekends">
+<input checked="" id="check-weekends" type="checkbox">
+                            WEEKENDS
+                        </label>
+<div style="font-weight: 700; font-size: 1.25rem;">2 <span class="text-subtle" data-editable="unit-week" style="font-size: 0.875rem; font-weight: 400;">/ week</span></div>
+</div>
+<div class="info-row">
+<span data-editable="info-weekends">Sat/Sun (104 days)</span>
+</div>
+<div class="h-separator"></div>
+</div>
+<!-- Holidays -->
+<div class="control-group">
+<div class="control-header">
+<label class="checkbox-label" data-editable="label-holidays" for="check-holidays">
+<input checked="" id="check-holidays" type="checkbox">
+                            FEDERAL HOLIDAYS
+                        </label>
+<input class="input-inline no-spinner" id="val-holidays" type="number" value="11">
+</div>
+<div class="info-row">
+<span data-editable="info-holidays">Standard US Federal holidays.</span>
+</div>
+<input id="slider-holidays" max="20" min="0" type="range" value="11">
+</div>
+<!-- Sick Days -->
+<div class="control-group">
+<div class="control-header">
+<label class="checkbox-label" data-editable="label-sick" for="check-sick">
+<input checked="" id="check-sick" type="checkbox">
+                            SICK DAYS
+                        </label>
+<input class="input-inline no-spinner" id="val-sick" type="number" value="7">
+</div>
+<div class="info-row">
+<span data-editable="info-sick" style="width: 80%;">Personal / Sick leave. Default is average benefit for salaried employees in 2025</span>
+<a href="https://www.indeed.com/career-advice/career-development/sick-days-per-year-average" target="_blank">
+<span class="material-symbols-outlined icon-sm">link</span>
+</a>
+</div>
+<input id="slider-sick" max="30" min="0" type="range" value="7">
+</div>
+</div>
+</details>
+<!-- Footer -->
+<footer>
+<span data-editable="footer-text">made by <a href="https://haaans.com/about" target="_blank">hans</a> •</span>
+<span>stores your settings in local storage <button id="reset-storage">click to reset</button></span>
+</footer>
+</div>
+<script>
+        // --- 0. Persistence Logic ---
+        const STORAGE_KEY = 'dailyIncomeCalc_v1';
+        
+        function saveState() {
+            const stateToSave = {
+                // Inputs
+                salary: inputs.salary.input.value,
+                taxCheck: inputs.tax.check.checked,
+                taxVal: inputs.tax.val.value,
+                benefitsCheck: inputs.benefits.check.checked,
+                benefitsVal: inputs.benefits.val.value,
+                vacationCheck: inputs.vacation.check.checked,
+                vacationVal: inputs.vacation.val.value,
+                weekendsCheck: inputs.weekends.check.checked,
+                holidaysCheck: inputs.holidays.check.checked,
+                holidaysVal: inputs.holidays.val.value,
+                sickCheck: inputs.sick.check.checked,
+                sickVal: inputs.sick.val.value,
+                // App State
+                filingStatus: state.filingStatus,
+                usState: state.usState,
+                darkMode: document.body.classList.contains('dark-mode')
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (!saved) return;
+            try {
+                const s = JSON.parse(saved);
+                
+                // Restore values
+                if(s.salary) { inputs.salary.input.value = s.salary; syncSalary(); } 
+                if(s.taxCheck !== undefined) inputs.tax.check.checked = s.taxCheck;
+                if(s.taxVal) { inputs.tax.val.value = s.taxVal; inputs.tax.slider.value = s.taxVal; }
+                
+                if(s.benefitsCheck !== undefined) inputs.benefits.check.checked = s.benefitsCheck;
+                if(s.benefitsVal) { inputs.benefits.val.value = s.benefitsVal; inputs.benefits.slider.value = parseCurrency(s.benefitsVal); }
+                
+                if(s.vacationCheck !== undefined) inputs.vacation.check.checked = s.vacationCheck;
+                if(s.vacationVal) { inputs.vacation.val.value = s.vacationVal; inputs.vacation.slider.value = s.vacationVal; }
+                
+                if(s.weekendsCheck !== undefined) inputs.weekends.check.checked = s.weekendsCheck;
+                
+                if(s.holidaysCheck !== undefined) inputs.holidays.check.checked = s.holidaysCheck;
+                if(s.holidaysVal) { inputs.holidays.val.value = s.holidaysVal; inputs.holidays.slider.value = s.holidaysVal; }
+                
+                if(s.sickCheck !== undefined) inputs.sick.check.checked = s.sickCheck;
+                if(s.sickVal) { inputs.sick.val.value = s.sickVal; inputs.sick.slider.value = s.sickVal; }
+
+                // App State
+                if(s.filingStatus) { state.filingStatus = s.filingStatus; updateFilingStatusUI(); }
+                if(s.usState) { state.usState = s.usState; document.getElementById('select-state').value = s.usState; }
+                
+                if(s.darkMode) {
+                    document.body.classList.add('dark-mode');
+                    document.getElementById('theme-icon').textContent = 'dark_mode';
+                }
+
+                calculate(); // Run calc after load
+            } catch(e) { console.error("Failed to load state", e); }
+        }
+
+        document.getElementById('reset-storage').addEventListener('click', () => {
+            localStorage.removeItem(STORAGE_KEY);
+            location.reload();
+        });
+
+        // --- Theme Toggle Logic ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            themeIcon.textContent = isDark ? 'dark_mode' : 'light_mode';
+            saveState(); 
+        });
+
+        // --- Toast Logic ---
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.classList.add("show");
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3000);
+        }
+
+        // --- Edit Mode Logic ---
+        let editMode = false;
+
+        const toggleEditMode = (forceState = null) => {
+            editMode = forceState !== null ? forceState : !editMode;
+            document.body.classList.toggle('edit-mode', editMode);
+            
+            document.querySelectorAll('[data-editable]').forEach(el => {
+                el.contentEditable = editMode;
+            });
+            
+            if(editMode) showToast("EDIT MODE: ON");
+        };
+
+        document.getElementById('close-edit-mode').addEventListener('click', () => {
+            toggleEditMode(false);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.matches('input, select, textarea')) return;
+            if (e.target.isContentEditable) return;
+
+            const key = e.key.toLowerCase();
+            if (key === 'e') {
+                e.preventDefault(); 
+                toggleEditMode();
+            }
+            if (key === 'c') {
+                e.preventDefault();
+                const changes = {};
+                document.querySelectorAll('[data-editable]').forEach(el => {
+                    changes[el.dataset.editable] = el.innerText.trim();
+                });
+                navigator.clipboard.writeText(JSON.stringify(changes, null, 2))
+                    .then(() => showToast("COPIED CONFIG TO CLIPBOARD"))
+                    .catch(() => showToast("ERROR COPYING"));
+            }
+        });
+
+
+        // --- Data ---
+        
+        const FED_BRACKETS_2025 = {
+            SINGLE: [
+                { limit: 11925, rate: 0.10 },
+                { limit: 48475, rate: 0.12 },
+                { limit: 103350, rate: 0.22 },
+                { limit: 197300, rate: 0.24 },
+                { limit: 250525, rate: 0.32 },
+                { limit: 626350, rate: 0.35 },
+                { limit: Infinity, rate: 0.37 }
+            ],
+            JOINT: [
+                { limit: 23850, rate: 0.10 },
+                { limit: 96950, rate: 0.12 },
+                { limit: 206700, rate: 0.22 },
+                { limit: 394600, rate: 0.24 },
+                { limit: 501050, rate: 0.32 },
+                { limit: 751600, rate: 0.35 },
+                { limit: Infinity, rate: 0.37 }
+            ]
+        };
+
+        const FICA = {
+            SS_RATE: 0.062,
+            SS_LIMIT: 176100, 
+            MED_RATE: 0.0145,
+            ADD_MED_RATE: 0.009,
+            ADD_MED_THRESHOLD_SINGLE: 200000,
+            ADD_MED_THRESHOLD_JOINT: 250000
+        };
+
+        const STATE_RATES = {
+            AL: 0.04, AK: 0.00, AZ: 0.025, AR: 0.04, CA: 0.08, CO: 0.044, CT: 0.05, DE: 0.05, DC: 0.06,
+            FL: 0.00, GA: 0.05, HI: 0.07, ID: 0.058, IL: 0.0495, IN: 0.0315, IA: 0.05, KS: 0.05,
+            KY: 0.04, LA: 0.035, ME: 0.06, MD: 0.05, MA: 0.05, MI: 0.0425, MN: 0.07, MS: 0.04,
+            MO: 0.04, MT: 0.05, NE: 0.06, NV: 0.00, NH: 0.00, NJ: 0.05, NM: 0.04, NY: 0.055,
+            NC: 0.045, ND: 0.02, OH: 0.035, OK: 0.04, OR: 0.08, PA: 0.0307, RI: 0.04, SC: 0.06,
+            SD: 0.00, TN: 0.00, TX: 0.00, UT: 0.0465, VT: 0.07, VA: 0.05, WA: 0.00, WV: 0.04,
+            WI: 0.05, WY: 0.00
+        };
+
+        let state = {
+            filingStatus: 'JOINT',
+            usState: 'WA'
+        };
+
+        const inputs = {
+            salary: { input: document.getElementById('salary-input'), slider: document.getElementById('salary-slider') },
+            tax: { check: document.getElementById('check-tax'), val: document.getElementById('val-tax'), slider: document.getElementById('slider-tax') },
+            benefits: { check: document.getElementById('check-benefits'), val: document.getElementById('val-benefits'), slider: document.getElementById('slider-benefits') },
+            vacation: { check: document.getElementById('check-vacation'), val: document.getElementById('val-vacation'), slider: document.getElementById('slider-vacation') },
+            weekends: { check: document.getElementById('check-weekends') },
+            holidays: { check: document.getElementById('check-holidays'), val: document.getElementById('val-holidays'), slider: document.getElementById('slider-holidays') },
+            sick: { check: document.getElementById('check-sick'), val: document.getElementById('val-sick'), slider: document.getElementById('slider-sick') },
+        };
+
+        const taxControls = {
+            btnSingle: document.getElementById('btn-single'),
+            btnJoint: document.getElementById('btn-joint'),
+            selectState: document.getElementById('select-state'),
+            breakdownLabel: document.getElementById('tax-breakdown-label')
+        };
+
+        const displays = {
+            daily: document.getElementById('display-daily'),
+            hourly: document.getElementById('display-hourly'),
+            ytd: document.getElementById('display-ytd'),
+            remaining: document.getElementById('display-remaining'),
+            workdaysSummary: document.getElementById('summary-workdays'),
+            progressBar: document.getElementById('progress-bar-ytd'),
+            taxStatusText: document.getElementById('tax-status-text'),
+            benefitsStatusText: document.getElementById('benefits-status-text')
+        };
+
+        const parseCurrency = (str) => parseFloat(str.replace(/,/g, '')) || 0;
+        const formatCurrency = (num) => num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+        const calculateEstimatedTaxRate = (salary) => {
+            let fedTax = 0;
+            let previousLimit = 0;
+            const brackets = state.filingStatus === 'SINGLE' ? FED_BRACKETS_2025.SINGLE : FED_BRACKETS_2025.JOINT;
+
+            for (const bracket of brackets) {
+                if (salary > previousLimit) {
+                    const taxableInBracket = Math.min(salary, bracket.limit) - previousLimit;
+                    fedTax += taxableInBracket * bracket.rate;
+                    previousLimit = bracket.limit;
+                } else {
+                    break;
+                }
+            }
+
+            const ssTax = Math.min(salary, FICA.SS_LIMIT) * FICA.SS_RATE;
+            let medTax = salary * FICA.MED_RATE;
+            
+            const addMedThreshold = state.filingStatus === 'SINGLE' ? FICA.ADD_MED_THRESHOLD_SINGLE : FICA.ADD_MED_THRESHOLD_JOINT;
+            if (salary > addMedThreshold) {
+                medTax += (salary - addMedThreshold) * FICA.ADD_MED_RATE;
+            }
+
+            const stateRate = STATE_RATES[state.usState] || 0;
+            const stateTax = salary * stateRate;
+
+            const totalTax = fedTax + ssTax + medTax + stateTax;
+            const effectiveRate = (totalTax / salary) * 100;
+
+            return isNaN(effectiveRate) ? 0 : effectiveRate;
+        };
+
+        const updateTaxUI = () => {
+            const salary = parseCurrency(inputs.salary.input.value);
+            const rate = calculateEstimatedTaxRate(salary);
+            inputs.tax.val.value = rate.toFixed(1);
+            inputs.tax.slider.value = rate;
+        };
+
+        const updateFilingStatusUI = () => {
+            if (state.filingStatus === 'SINGLE') {
+                taxControls.btnSingle.classList.remove('inactive');
+                taxControls.btnSingle.classList.add('active');
+                
+                taxControls.btnJoint.classList.remove('active');
+                taxControls.btnJoint.classList.add('inactive');
+            } else {
+                taxControls.btnSingle.classList.remove('active');
+                taxControls.btnSingle.classList.add('inactive');
+
+                taxControls.btnJoint.classList.remove('inactive');
+                taxControls.btnJoint.classList.add('active');
+            }
+        };
+
+        // --- Core Calc & Save ---
+        const calculate = () => {
+            const salary = parseCurrency(inputs.salary.input.value);
+            
+            let taxRate = 0;
+            if (inputs.tax.check.checked) {
+                taxRate = parseFloat(inputs.tax.val.value) / 100;
+            }
+            const netSalary = salary * (1 - taxRate);
+
+            let benefits = 0;
+            if (inputs.benefits.check.checked) {
+                benefits = parseCurrency(inputs.benefits.val.value);
+            }
+            
+            const totalComp = netSalary + benefits;
+
+            const daysInYear = 365;
+            let deductions = 0;
+            if (inputs.weekends.check.checked) deductions += 104;
+
+            if (inputs.vacation.check.checked) {
+                deductions += parseFloat(inputs.vacation.val.value);
+            }
+
+            if (inputs.holidays.check.checked) deductions += parseFloat(inputs.holidays.val.value);
+            if (inputs.sick.check.checked) deductions += parseFloat(inputs.sick.val.value);
+
+            const workingDays = Math.max(1, daysInYear - deductions);
+
+            const dailyRate = totalComp / workingDays;
+            const hourlyRate = dailyRate / 8;
+
+            const now = new Date();
+            const start = new Date(now.getFullYear(), 0, 0);
+            const diff = now - start;
+            const dayOfYear = Math.floor(diff / (1000 * 60 * 60 * 24));
+            
+            const percentYear = dayOfYear / 365;
+            const daysWorkedYTD = workingDays * percentYear;
+            
+            const earnedYTD = daysWorkedYTD * dailyRate;
+            const remaining = totalComp - earnedYTD;
+
+            displays.daily.textContent = formatCurrency(dailyRate);
+            displays.hourly.textContent = hourlyRate.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            displays.ytd.textContent = formatCurrency(earnedYTD);
+            displays.remaining.textContent = formatCurrency(remaining);
+            displays.workdaysSummary.textContent = Math.round(workingDays);
+            
+            const percentComplete = (earnedYTD / totalComp) * 100;
+            displays.progressBar.style.width = `${Math.min(100, Math.max(0, percentComplete))}%`;
+
+            displays.taxStatusText.textContent = inputs.tax.check.checked ? "after taxes," : "before taxes,";
+            displays.benefitsStatusText.textContent = inputs.benefits.check.checked ? " and health care benefits paid" : "";
+            
+            saveState(); // Persist on every calc update
+        }
+
+        const syncSalary = () => {
+            const val = parseCurrency(inputs.salary.input.value);
+            inputs.salary.slider.value = Math.min(val, 500000); 
+            if(inputs.tax.check.checked) {
+                updateTaxUI();
+            }
+            calculate();
+        };
+
+        inputs.salary.input.addEventListener('input', () => {
+            if(inputs.tax.check.checked) updateTaxUI();
+            calculate();
+        });
+        inputs.salary.input.addEventListener('blur', () => {
+            inputs.salary.input.value = parseInt(parseCurrency(inputs.salary.input.value)).toLocaleString('en-US');
+            syncSalary();
+        });
+        
+        inputs.salary.slider.addEventListener('input', () => {
+            inputs.salary.input.value = parseInt(inputs.salary.slider.value).toLocaleString('en-US');
+            if(inputs.tax.check.checked) updateTaxUI();
+            calculate();
+        });
+
+        // Toggle Status Logic with Benefit Updates
+        taxControls.btnSingle.addEventListener('click', () => {
+            state.filingStatus = 'SINGLE';
+            updateFilingStatusUI();
+            updateTaxUI();
+            if(inputs.benefits.check.checked) {
+                inputs.benefits.val.value = "7,900";
+                inputs.benefits.slider.value = 7900;
+            }
+            calculate();
+        });
+
+        taxControls.btnJoint.addEventListener('click', () => {
+            state.filingStatus = 'JOINT';
+            updateFilingStatusUI();
+            updateTaxUI();
+            if(inputs.benefits.check.checked) {
+                inputs.benefits.val.value = "20,100";
+                inputs.benefits.slider.value = 20100;
+            }
+            calculate();
+        });
+
+        taxControls.selectState.addEventListener('change', (e) => {
+            state.usState = e.target.value;
+            updateTaxUI();
+            calculate();
+        });
+
+        const attachSync = (key, isCurrency = false) => {
+            const i = inputs[key].input || inputs[key].val;
+            const s = inputs[key].slider;
+            if(!i || !s) return;
+
+            i.addEventListener('input', () => {
+                s.value = isCurrency ? parseCurrency(i.value) : i.value;
+                calculate();
+            });
+            s.addEventListener('input', () => {
+                i.value = isCurrency ? parseInt(s.value).toLocaleString('en-US') : s.value;
+                calculate();
+            });
+            if(isCurrency) {
+                i.addEventListener('blur', () => {
+                    i.value = parseInt(parseCurrency(i.value)).toLocaleString('en-US');
+                });
+            }
+        };
+
+        attachSync('tax'); 
+        inputs.tax.slider.addEventListener('input', () => {
+            inputs.tax.val.value = inputs.tax.slider.value;
+            calculate();
+        });
+        inputs.tax.val.addEventListener('input', () => {
+            inputs.tax.slider.value = inputs.tax.val.value;
+            calculate();
+        });
+
+        attachSync('benefits', true);
+        attachSync('vacation');
+        attachSync('holidays');
+        attachSync('sick');
+        
+        Object.values(inputs).forEach(grp => {
+            if(grp.check) grp.check.addEventListener('change', calculate);
+        });
+
+        // Init
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        loadState(); // Load Settings
+        if(!localStorage.getItem(STORAGE_KEY)) {
+            updateFilingStatusUI();
+            updateTaxUI();
+            calculate();
+        }
+
+    </script>
+
+</body></html>
