@@ -1,29 +1,31 @@
-# Make.
+# `made`
 
-**Stop wondering. Start knowing.**
+Modern salaries are surprisingly difficult to see what a company is paying you for a day of work after taxes. Add your pre-tax salary, see the effective dollar amount of how much you made today (discounting taxes and including befits paid). 
 
-Make is a brutalist, no-nonsense daily income calculator designed to answer one simple question: **What did you make today?**
 
-No fluff, no sign-ups, no cloud syncing. Just raw numbers in a clean, distraction-free interface.
+<div align = center>
+  
+[<kbd>  <br>haaans.com/made <br>  <br>  </kbd>](https://haaans.com/made)
 
-## About
+</div>
 
-In a world of complex financial dashboards and endless subscriptions, **Make** strips it all back. It takes your annual salary, factors in your tax situation, benefits, and time off, and boils it down to the metric that matters most: your daily realized income.
 
-### Features
-- **Instant Calculation:** See your daily, hourly, and year-to-date earnings in real-time.
-- **Privacy First:** All data is stored locally in your browser (`localStorage`). Nothing leaves your device.
-- **Granular Control:** Adjust for taxes (State & Federal), 401k/healthcare benefits, vacation days, and holidays.
-- **Brutalist Design:** High-contrast, typographic-focused UI that looks great in Light or Dark mode.
+<p align="center">
+<img src="demos/made-light.gif" alt="see your salary instantly" width="500">
+</p>
 
-## Usage
+## Settings
 
-Simply open `index.html` in your browser.
+<table>
+<tr valign="top">
+<td width="50%">
+<h3>Grounded data & local storage </h3>
+<p>Quick defaults & input data based on us median income and benefits paid. Stores latest state in clearable local cache</p>
+</td>
+<td width="50%">
+<img src="demos/made-settings.png" alt="NIIT calculation" >
+</td>
+</tr>
+</table>
 
-1. Enter your **Annual Salary**.
-2. Toggle **Tax Settings** (Single/Married, State).
-3. Adjust **Benefits** and **Non-Working Days**.
-4. See exactly what your time is worth today.
-
----
 *made by [hans](https://haaans.com/about)*
