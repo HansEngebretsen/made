@@ -14,7 +14,7 @@ Modern salaries are surprisingly difficult to see what a company is paying you f
 <img src="demos/made-light.gif" alt="see your salary instantly" width="500">
 </p>
 
-## Settings
+## Features
 
 <table>
 <tr valign="top">
