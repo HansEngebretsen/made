@@ -1,6 +1,6 @@
 # `made`
 
-It's surprisingly hard to see what a salary pays you for one day of work. Put in your pre-tax salary and see what you made today, after taxes and with the benefits your company pays counted in.
+How much did you make today? Harder to answer than you'd think. Put in your pre-tax salary and see what you made today, after taxes and with the benefits your company pays counted in.
 
 
 <div align="center">
