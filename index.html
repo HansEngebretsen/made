@@ -55,7 +55,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&amp;family=Big+Shoulders:opsz,wght@10..72,800..900&amp;family=Mona+Sans:wght@400..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
 <!-- made as it was, on pure white: the third stop on the theme button -->
 <style id="classic" media="not all">
@@ -638,7 +638,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         #toast.show { visibility: visible; opacity: 1; bottom: 50px; }
 
         /* The markup is the new version's: what it took off the elements, put back here */
-        .date-short { display: none; }
+        .date-short, .orange-icon { display: none; }
         .sheet { display: flex; flex-direction: column; gap: 2rem; }
         .label-main, .stat-label { color: var(--text-subtle); }
         .label-main { letter-spacing: 0.1em; }
@@ -671,7 +671,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             --toggle-text-inactive: #6b6b6b;
             --text-subtle: #ababab;
             --text-note: #6b6b6b;
-            --figures: 'Big Shoulders', 'Arial Narrow', sans-serif;
             
             /* Layout */
             --max-width: 48rem;
@@ -702,16 +701,35 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             --select-arrow: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
         }
 
+        body.orange {
+            --bg-color: #ff8a1f;
+            --text-color: #1a0e06;
+            --accent-color: #1a0e06;
+            --box-bg: #1a0e06;
+            --box-text: #ff8a1f;
+            --border-color: #b54a00;
+            --input-placeholder: #b54a00;
+            --slider-track: #b54a00;
+            --slider-thumb: #1a0e06;
+            --hover-bg: #ff962f;
+            --toggle-bg-active: #1a0e06;
+            --toggle-text-active: #ff8a1f;
+            --toggle-text-inactive: #652800;
+            --text-subtle: #b54a00;
+            --text-note: #652800;
+        }
+
         /* Reset & Base Styles */
         * { box-sizing: border-box; }
 
         html { background-color: #f9fafc; }
         html:has(body.dark-mode) { background-color: #232525; }
+        html:has(body.orange) { background-color: #ff8a1f; }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Mona Sans', system-ui, sans-serif;
+            font-family: 'Barlow Condensed', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background-color: var(--bg-color);
@@ -801,10 +819,10 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         }
 
         .label-main {
-            font-size: 1.375rem;
+            font-size: 1.625rem;
             line-height: 1.1;
             font-weight: 500;
-            letter-spacing: -0.008em;
+            letter-spacing: 0;
             margin-bottom: 1.125rem;
             display: block;
         }
@@ -816,22 +834,21 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             display: inline-flex;
             align-items: flex-start;
             justify-content: center;
-            font-family: var(--figures);
-            font-weight: 800;
+            font-weight: 700;
         }
 
         .dollar-sign {
             position: relative;
-            top: 1px;
-            font-size: 2.5rem;
+            top: -2px;
+            font-size: 2.9375rem;
             line-height: 2.5625rem;
             margin: -3px 0.6875rem 0 0;
         }
 
         .display-daily {
             position: relative;
-            top: 1px;
-            font-size: 6.4375rem;
+            top: -6px;
+            font-size: 7.3125rem;
             line-height: 5.25rem;
             height: 5.25rem;
             letter-spacing: 0.02em;
@@ -840,13 +857,13 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
 
         @media (min-width: 640px) {
             .main-number-box { padding: 2.25rem 2.625rem; }
-            .dollar-sign { font-size: 3.1875rem; line-height: 3.25rem; margin: -4px 0.875rem 0 0; }
-            .display-daily { top: 2px; font-size: 8.25rem; line-height: 6.75rem; height: 6.75rem; }
+            .dollar-sign { top: -3px; font-size: 3.75rem; line-height: 3.25rem; margin: -4px 0.875rem 0 0; }
+            .display-daily { top: -7.5px; font-size: 9.4375rem; line-height: 6.75rem; height: 6.75rem; }
         }
 
         .subtext {
-            font-size: 1rem;
-            line-height: 1.3;
+            font-size: 1.1875rem;
+            line-height: 1.25;
             margin-top: 1.125rem;
             max-width: 38rem;
             margin-left: auto;
@@ -865,9 +882,8 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
                 margin: 0 1rem 0 0;
                 writing-mode: vertical-rl;
                 transform: rotate(180deg);
-                font-family: var(--figures);
-                font-size: 118.5px;
-                font-weight: 900;
+                font-size: 125px;
+                font-weight: 700;
                 line-height: 1;
                 letter-spacing: 0;
                 text-transform: uppercase;
@@ -905,7 +921,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         .stat-card:hover { background-color: var(--hover-bg); }
 
         .stat-label {
-            font-size: 0.9375rem;
+            font-size: 1.125rem;
             line-height: 1.15;
             font-weight: 500;
         }
@@ -916,10 +932,9 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         }
 
         .stat-value-container {
-            font-family: var(--figures);
-            font-size: 2.0625rem;
-            font-weight: 800;
-            letter-spacing: 0.03em;
+            font-size: 2.375rem;
+            font-weight: 700;
+            letter-spacing: 0.028em;
             display: flex;
             align-items: flex-start;
             line-height: 1;
@@ -934,8 +949,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         }
 
         .stat-unit {
-            font-family: 'Mona Sans', system-ui, sans-serif;
-            font-size: 1rem;
+            font-size: 1.1875rem;
             font-weight: 400;
             line-height: 1.2;
             letter-spacing: 0;
@@ -960,7 +974,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         
         .salary-label {
             display: block;
-            font-size: 0.9375rem;
+            font-size: 1.125rem;
             line-height: 1.15;
             font-weight: 500;
             margin-bottom: 0.375rem;
@@ -973,9 +987,8 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         }
 
         .salary-dollar {
-            font-family: var(--figures);
-            font-size: 2.125rem;
-            font-weight: 800;
+            font-size: 2.375rem;
+            font-weight: 700;
             color: var(--text-subtle);
             margin: 0.25em 0.2em 0 0;
             line-height: 1;
@@ -984,15 +997,15 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         .brutalist-input-large {
             width: 100%;
             height: 4.75rem;
-            font-family: var(--figures);
-            font-size: 4.125rem;
-            font-weight: 800;
+            font-size: 4.6875rem;
+            font-weight: 700;
             background: transparent;
             color: var(--text-color);
             border: none;
             padding: 0;
             line-height: 4.75rem;
-            letter-spacing: 0.024em;
+            letter-spacing: 0.026em;
+            font-family: inherit;
         }
         .brutalist-input-large:focus { outline: none; }
         .brutalist-input-large::placeholder { color: var(--input-placeholder); }
@@ -1002,7 +1015,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             position: relative;
             display: flex;
             justify-content: space-between;
-            font-size: 0.875rem;
+            font-size: 1.0625rem;
             font-weight: 500;
             line-height: 1.2;
             margin-top: 0.75rem;
@@ -1068,7 +1081,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         summary:hover { background-color: var(--hover-bg); }
 
         .summary-title {
-            font-size: 1.125rem;
+            font-size: 1.375rem;
             font-weight: 500;
             line-height: 1.2;
         }
@@ -1104,6 +1117,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             gap: 0.5rem;
             font-weight: 500;
             cursor: pointer;
+            font-size: 1.125rem;
         }
 
         input[type=checkbox] {
@@ -1133,15 +1147,15 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         .input-inline {
             width: 4rem;
             text-align: right;
-            font-family: var(--figures);
-            font-weight: 800;
-            letter-spacing: 0.03em;
+            font-weight: 700;
+            letter-spacing: 0.028em;
             background: transparent;
             color: var(--text-color);
             border: none;
             border-bottom: 2px solid var(--border-color);
-            font-size: 1.375rem;
+            font-size: 1.5rem;
             padding: 0;
+            font-family: inherit;
         }
         .input-inline:focus { outline: none; }
 
@@ -1151,8 +1165,8 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             margin: 0;
         }
 
-        .weekend-count { font-family: var(--figures); font-weight: 800; font-size: 1.375rem; }
-        .weekend-count span { font: 400 0.875rem 'Mona Sans', system-ui, sans-serif; }
+        .weekend-count { font-weight: 700; font-size: 1.5rem; }
+        .weekend-count span { font-size: 1rem; font-weight: 400; }
 
         .toggle-group { display: flex; gap: 0.5rem; width: 100%; font-size: 0.875rem; }
 
@@ -1168,7 +1182,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             flex: 1;
             padding: 0.25rem 0.5rem;
             font-weight: 500;
-            font-size: 0.875rem;
+            font-size: 1.0625rem;
             border: none;
             cursor: pointer;
             transition: background-color 0.2s, color 0.2s;
@@ -1186,7 +1200,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             color: var(--text-color);
             padding: 0.25rem 0.5rem;
             font-weight: 500;
-            font-size: 0.875rem;
+            font-size: 1.0625rem;
             cursor: pointer;
             border-radius: 0;
             font-family: inherit;
@@ -1203,8 +1217,8 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         .select-styled:focus { outline: none; }
 
         .info-row {
-            font-size: 0.875rem;
-            line-height: 1.3;
+            font-size: 1.0625rem;
+            line-height: 1.25;
             color: var(--text-note);
             display: flex;
             justify-content: space-between;
@@ -1245,7 +1259,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         /* Footer */
         footer {
             text-align: center;
-            font-size: 0.875rem;
+            font-size: 1.0625rem;
             line-height: 1.3;
             color: var(--text-subtle);
             margin-top: 2rem;
@@ -1282,6 +1296,9 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         }
         .floating-btn:hover { background-color: var(--hover-bg); }
         .floating-btn .material-symbols-outlined { font-size: 1.875rem; }
+        .orange-icon { display: none; width: 1.875rem; height: 1.875rem; }
+        body.orange .orange-icon { display: block; }
+        body.orange #theme-icon { display: none; }
 
         #edit-bar {
             position: fixed;
@@ -1340,6 +1357,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
                 line-height: 0;
             }
             .floating-btn .material-symbols-outlined { font-size: 1.5rem; }
+            .orange-icon { width: 1.5rem; height: 1.5rem; }
         }
     </style>
 <!-- Google Analytics: page address only, so nothing kept in the URL reaches Google -->
@@ -1365,6 +1383,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
 <!-- Theme Toggle -->
 <button aria-label="Toggle Theme" class="floating-btn" id="theme-toggle">
 <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+<svg class="orange-icon" viewBox="0 0 24 24" fill="none" stroke="#1a0e06" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13.6" r="9.2" fill="#ffa238" stroke-width="1.5"/><path d="M6 13.2c.2-2.2 1.5-3.9 3.4-4.5" stroke="#ffe0b0" stroke-width="1.5"/><path d="M12.3 5.4c.3-2.9 2.6-4.6 6.6-4.2-.2 3.4-2.9 5-6.6 4.2Z" fill="#2f8f3a" stroke-width="1.3"/><path d="M12 5.6 11 2.9" stroke-width="1.6"/></svg>
 </button>
 <!-- Edit Mode Top Bar -->
 <div id="edit-bar">
@@ -1382,7 +1401,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
 <h1 data-editable="main-title"></h1>
 <div class="header-date-group">
 <span class="text-subtle uppercase" data-editable="subtitle-est" style="font-weight: 500; font-size: 0.875rem;"></span>
-<div id="current-date" style="font-size: 1rem; line-height: 1.2; font-weight: 500;"><span class="date-full">Monday, January 26, 2026</span><span class="date-short">Mon Jan 26</span></div>
+<div id="current-date" style="font-size: 1.1875rem; line-height: 1; font-weight: 500;"><span class="date-full">Monday, January 26, 2026</span><span class="date-short">Mon Jan 26</span></div>
 </div>
 </header>
 <div class="sheet">
@@ -1657,7 +1676,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const phone = matchMedia('(max-width: 639px)');
-        const THEMES = ['light', 'dark', 'white']; // white: made as it was, not on phones
+        const THEMES = ['light', 'dark', 'orange', 'white']; // white: made as it was, not on phones
         let theme = 'light';
 
         const shownTheme = () => theme === 'white' && phone.matches ? 'light' : theme;
@@ -1666,13 +1685,14 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             theme = THEMES.includes(name) ? name : 'light';
             const shown = shownTheme();
             document.body.classList.toggle('dark-mode', shown === 'dark');
+            document.body.classList.toggle('orange', shown === 'orange');
             document.getElementById('refresh').media = shown === 'white' ? 'not all' : 'all';
             document.getElementById('classic').media = shown === 'white' ? 'all' : 'not all';
             themeIcon.textContent = shown === 'dark' ? 'dark_mode' : 'light_mode';
         }
 
         themeToggleBtn.addEventListener('click', () => {
-            const choices = phone.matches ? ['light', 'dark'] : THEMES;
+            const choices = phone.matches ? THEMES.filter(t => t !== 'white') : THEMES;
             setTheme(choices[(choices.indexOf(shownTheme()) + 1) % choices.length]);
             saveState();
         });
