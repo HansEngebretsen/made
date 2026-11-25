@@ -929,6 +929,7 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         /* three across and narrow: the longest label takes two lines */
         @media (min-width: 640px) and (max-width: 799px) {
             .stat-card { padding: 1rem; }
+            .stat-label { font-size: 1rem; }
         }
 
         .stat-value-container {
@@ -1358,6 +1359,45 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             }
             .floating-btn .material-symbols-outlined { font-size: 1.5rem; }
             .orange-icon { width: 1.5rem; height: 1.5rem; }
+        }
+
+        /* Wider than a phone: the gaps follow the window's height, so the number through the slider is one screen and
+           Settings starts at the fold. --air is what a window has over 610px (640px with the label on top), up to the roomiest fit and a little under */
+        @media (min-width: 640px) {
+            body { --air: clamp(-45px, 100svh - 640px, 192px); padding-top: calc(24px + var(--air) * 0.17); }
+            .sheet { gap: calc(24px + var(--air) * 0.125); }
+            .primary-output { padding: 0; }
+            .label-main { margin-bottom: calc(10px + var(--air) * 0.04); }
+            .main-number-box { padding-block: calc(24px + var(--air) * 0.0625); }
+            .subtext { margin-top: calc(12px + var(--air) * 0.03); }
+            .stat-card { height: calc(100px + var(--air) * 0.083); padding-top: calc(14px + var(--air) * 0.03); padding-bottom: calc(14px + var(--air) * 0.03); }
+            .container { gap: calc(24px + var(--air) * 0.04); }
+            .salary-section { margin-top: calc(4px + var(--air) * 0.02); }
+            .salary-label { margin-bottom: calc(2px + var(--air) * 0.02); }
+            .brutalist-input-large { height: calc(64px + var(--air) * 0.0625); line-height: calc(64px + var(--air) * 0.0625); }
+            .salary-dollar { margin-top: calc(3px + var(--air) * 0.031); }
+            .salary-input-group { margin-bottom: calc(8px + var(--air) * 0.03); }
+            .slider-labels { margin-top: calc(6px + var(--air) * 0.03); }
+        }
+        /* ... the date and the theme button share the rule's line, as on a phone, until there is a margin for the button */
+        @media (min-width: 640px) and (max-width: 1099px) {
+            header { align-items: center; }
+            .header-date-group { width: 100%; justify-content: flex-start; gap: 0; }
+            .floating-btn {
+                position: absolute;
+                top: calc(24px + var(--air) * 0.17 - 12px);
+                right: calc(max(1rem, 50% - 24rem) - 0.625rem);
+                padding: 0.625rem;
+                line-height: 0;
+            }
+            .floating-btn .material-symbols-outlined { font-size: 1.5rem; }
+            .orange-icon { width: 1.5rem; height: 1.5rem; }
+        }
+        @media (min-width: 1100px) {
+            body { --air: clamp(-45px, 100svh - 610px, 192px); }
+            .floating-btn { top: calc(24px + var(--air) * 0.17 - 13px); }
+            .primary-output { padding-top: calc(var(--air) * 0.125); }
+            .label-main { margin-bottom: 0; font-size: calc((524px + var(--air) * 0.815) * 0.16383); }
         }
     </style>
 <!-- Google Analytics: page address only, so nothing kept in the URL reaches Google -->
